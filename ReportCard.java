@@ -12,6 +12,14 @@ public class ReportCard {
 
     /**
      * grades in the various subjects (in French)
+     * français = French
+     * LV1 = first language
+     * LV2 = second language
+     * histoireGéography = history and geography
+     * SVT = science of life and earth
+     * physiqueChimie = physics and chemestry
+     * mathématiques = math
+     * sport = sport
      */
     private float français;
     private float LV1;
