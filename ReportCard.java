@@ -1,5 +1,7 @@
 package com.example.android.reportcard;
 
+import java.util.ArrayList;
+
 public class ReportCard {
 
     /**
@@ -29,6 +31,8 @@ public class ReportCard {
     private float physiqueChimie;
     private float mathématiques;
     private float sport;
+
+    private ArrayList<Float> subjects;
 
     /**
      * generate the report based on the datas from above
@@ -60,11 +64,11 @@ public class ReportCard {
         float globalAverage;
 
         globalAverage = français + LV1 + LV2 + histoireGéographie + SVT + physiqueChimie + mathématiques + sport;
-        globalAverage = globalAverage / 8;
+        globalAverage = globalAverage / subjects.size();
         return globalAverage;
     }
 
-    private void globalAverage {
+    private void globalAverage() {
         float globalAverage = calculateGlobalAverage(français, LV1, LV2, histoireGéographie, SVT, physiqueChimie, mathématiques, sport);
     }
 
@@ -169,6 +173,10 @@ public class ReportCard {
         this.sport = sport;
     }
 
+    /**
+     * @return a readable string value
+     */
+
     @Override
     public String toString() {
         return  "Student Name: " + studentLastName + " " + studentFirstName + "\n" +
@@ -182,7 +190,7 @@ public class ReportCard {
                 "Physique - Chimie: " + LV2 + " / 20" + "\n" +
                 "Mathématiques: " + LV2 + " / 20" + "\n" +
                 "sport: " + LV2 + " / 20" + "\n" +
-                "Global Average: " + globalAverage + " / 20";
+                "Global Average: " + " / 20";
 
     }
 
